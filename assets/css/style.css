@@ -39,6 +39,10 @@ body {
     word-wrap: break-word;
 }
 
+#container {
+    background: linear-gradient(-30deg, #005e03 0%, #ffae00 100%) !important;
+}
+
 h1,
 h2,
 h3,

@@ -1,26 +1,25 @@
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
+// var http = require('http');
+// var fs = require('fs');
+// var url = require('url');
+const express = require('express');
+const app = express();
+const port = 5000;
 
 // Creating Server
 
-http.createServer(function(request, response) {
-    var pathname = url.parse(request.url).pathname;
-    console.log("Request for" + pathname + "received");
+app.use(express.static('public'));
 
-    // Reading from File System(fs)
+// Set Views
+app.set('views', './views');
+app.set('view engine', 'ejs');
 
-    fs.readFile(pathname.substr(1), function(err, data) {
-        // Checking for errors
-        if (err) {
-            console.log(err);
-            response.writeHead(404, { 'Content-Type': 'text/index.html' });
-        } else {
-            response.writeHead(200, { 'Content-Type': 'text/index.html' });
-            response.write(data.toString());
-        }
-        response.end();
-    });
+// Navigation
+app.get('', (req, res) => {
+    res.render('index', { text: 'Ifund Africa' })
+})
 
-}).listen(8081);
-console.log('Server is listening at port 8081');
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html')
+})
+
+app.listen(port, () => console.info(`App listening on port ${port}`))
