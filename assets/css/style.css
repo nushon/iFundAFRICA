@@ -12193,3 +12193,13 @@ table p {
         margin-bottom: 0 !important;
     }
 }
+
+
+/* Donation Page */
+
+#donners {
+    margin: 0px 0px 80px 300px !important;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    row-gap: 5%;
+}

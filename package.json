@@ -1,27 +1,5 @@
 {
-    "name": "ifundafrica",
-    "version": "1.0.0",
-    "description": "Go fund me platform",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon app.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nushon/iFundAFRICA.git"
-    },
-    "author": "Albin Nushon Karmo",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/nushon/iFundAFRICA/issues"
-    },
-    "homepage": "https://github.com/nushon/iFundAFRICA#readme",
-    "dependencies": {
-        "ejs": "^3.1.6",
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.12"
-    }
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
